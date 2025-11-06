@@ -49,9 +49,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="py-24 bg-gradient-to-br from-secondary via-background to-accent/5 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--accent)/0.1)_0%,_transparent_50%)]" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
+          <div className="h-1 w-20 bg-gradient-accent rounded-full mb-8 mx-auto" />
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             Áreas de Atuação
           </h2>
@@ -62,10 +64,10 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {mainServices.map((service, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-all duration-300 hover:shadow-lg">
+              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-white to-accent/5 dark:from-card dark:to-accent/10">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-white" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+                    <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
@@ -78,10 +80,10 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="bg-secondary border-none hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-primary/5 to-accent/5">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-accent" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4">
+                    <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>

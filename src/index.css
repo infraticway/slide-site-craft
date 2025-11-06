@@ -118,7 +118,29 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--accent-blue)) 0%, hsl(var(--accent)) 100%);
   }
   
+  .gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 100%);
+  }
+  
+  .gradient-radial {
+    background: radial-gradient(circle at top right, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 40px hsl(var(--accent) / 0.3);
+  }
+  
+  .shadow-primary {
+    box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.4);
   }
 }

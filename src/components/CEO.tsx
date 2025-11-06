@@ -4,21 +4,25 @@ import ericaPhoto from "@/assets/erica-melo.jpg";
 
 const CEO = () => {
   return (
-    <section id="ceo" className="py-24 bg-secondary">
-      <div className="container mx-auto px-4">
+    <section id="ceo" className="py-24 bg-gradient-to-br from-primary/5 via-secondary to-accent/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(var(--accent)/0.15)_0%,_transparent_60%)]" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
+          <div className="h-1 w-20 bg-gradient-primary rounded-full mb-8 mx-auto" />
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">CEO & Fundadora</h2>
           
-          <Card className="border-2 overflow-hidden">
+          <Card className="border-none shadow-2xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-1 bg-gradient-primary p-8 flex flex-col items-center justify-center">
+              <div className="lg:col-span-1 bg-gradient-accent p-10 flex flex-col items-center justify-center relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mt-16" />
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mb-20" />
                 <img 
                   src={ericaPhoto}
                   alt="Érica Mélo" 
-                  className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl mb-6"
+                  className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl mb-6 relative z-10"
                 />
-                <h3 className="text-3xl font-bold text-white mb-2">Érica Mélo</h3>
-                <p className="text-white/90 text-lg mb-8">CEO & Fundadora</p>
+                <h3 className="text-3xl font-bold text-white mb-2 relative z-10">Érica Mélo</h3>
+                <p className="text-white/95 text-lg mb-8 relative z-10">CEO & Fundadora</p>
                 
                 <div className="space-y-4 w-full">
                   <a 
