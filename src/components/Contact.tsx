@@ -5,13 +5,14 @@ import melowLogo from "@/assets/melow-logo.png";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-24 bg-gradient-primary">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-24 gradient-deep-ocean animate-gradient relative overflow-hidden">
+      <div className="absolute inset-0 gradient-radial-blue opacity-50" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <img 
             src={melowLogo} 
             alt="Melow Connect" 
-            className="h-24 mx-auto mb-8 drop-shadow-xl"
+            className="h-24 mx-auto mb-8 drop-shadow-xl animate-pulse-glow"
           />
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -22,7 +23,7 @@ const Contact = () => {
             Entre em contato e descubra como podemos impulsionar seu crescimento na América Latina
           </p>
 
-          <Card className="border-none shadow-2xl">
+          <Card className="border-none shadow-glow-intense glass-blue">
             <CardContent className="pt-8 pb-8">
               <div className="space-y-6">
                 <div className="flex flex-col md:flex-row gap-4 justify-center items-center">

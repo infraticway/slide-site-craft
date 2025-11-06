@@ -21,7 +21,13 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     
     --primary-light: 210 50% 25%;
-    --accent-blue: 210 100% 45%;
+    --primary-dark: 215 70% 12%;
+    
+    --accent-blue: 210 100% 50%;
+    --accent-blue-light: 200 95% 60%;
+    --accent-cyan: 190 90% 55%;
+    --accent-purple: 250 70% 60%;
+    --accent-teal: 180 80% 50%;
 
     --secondary: 210 30% 96%;
     --secondary-foreground: 210 60% 15%;
@@ -29,7 +35,7 @@ All colors MUST be HSL.
     --muted: 210 30% 96%;
     --muted-foreground: 210 20% 45%;
 
-    --accent: 210 100% 45%;
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -65,7 +71,13 @@ All colors MUST be HSL.
     --primary-foreground: 210 60% 15%;
     
     --primary-light: 210 50% 25%;
-    --accent-blue: 210 100% 55%;
+    --primary-dark: 215 70% 12%;
+    
+    --accent-blue: 210 100% 60%;
+    --accent-blue-light: 200 95% 70%;
+    --accent-cyan: 190 90% 65%;
+    --accent-purple: 250 70% 70%;
+    --accent-teal: 180 80% 60%;
 
     --secondary: 210 50% 18%;
     --secondary-foreground: 0 0% 98%;
@@ -73,7 +85,7 @@ All colors MUST be HSL.
     --muted: 210 50% 18%;
     --muted-foreground: 210 20% 65%;
 
-    --accent: 210 100% 55%;
+    --accent: 210 100% 60%;
     --accent-foreground: 210 60% 8%;
 
     --destructive: 0 62.8% 30.6%;
@@ -81,7 +93,7 @@ All colors MUST be HSL.
 
     --border: 210 50% 18%;
     --input: 210 50% 18%;
-    --ring: 210 100% 55%;
+    --ring: 210 100% 60%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -118,12 +130,32 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--accent-blue)) 0%, hsl(var(--accent)) 100%);
   }
   
+  .gradient-blue-ocean {
+    background: linear-gradient(135deg, hsl(var(--accent-blue)) 0%, hsl(var(--accent-cyan)) 50%, hsl(var(--accent-blue-light)) 100%);
+  }
+  
+  .gradient-blue-purple {
+    background: linear-gradient(135deg, hsl(var(--accent-blue)) 0%, hsl(var(--accent-purple)) 100%);
+  }
+  
+  .gradient-teal-blue {
+    background: linear-gradient(135deg, hsl(var(--accent-teal)) 0%, hsl(var(--accent-blue)) 100%);
+  }
+  
+  .gradient-deep-ocean {
+    background: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--accent-blue)) 50%, hsl(var(--accent-cyan)) 100%);
+  }
+  
   .gradient-subtle {
     background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 100%);
   }
   
   .gradient-radial {
-    background: radial-gradient(circle at top right, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at top right, hsl(var(--accent) / 0.15) 0%, transparent 50%);
+  }
+  
+  .gradient-radial-blue {
+    background: radial-gradient(ellipse at top, hsl(var(--accent-blue) / 0.2) 0%, hsl(var(--accent-cyan) / 0.1) 40%, transparent 70%);
   }
   
   .glass-effect {
@@ -132,15 +164,56 @@ All colors MUST be HSL.
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
+  .glass-blue {
+    background: linear-gradient(135deg, hsl(var(--accent-blue) / 0.1) 0%, hsl(var(--accent-cyan) / 0.05) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--accent-blue) / 0.2);
+  }
+  
   .text-balance {
     text-wrap: balance;
   }
   
   .shadow-glow {
-    box-shadow: 0 0 40px hsl(var(--accent) / 0.3);
+    box-shadow: 0 0 40px hsl(var(--accent-blue) / 0.4), 0 0 80px hsl(var(--accent-cyan) / 0.2);
+  }
+  
+  .shadow-glow-intense {
+    box-shadow: 0 0 60px hsl(var(--accent-blue) / 0.6), 0 0 120px hsl(var(--accent-cyan) / 0.3);
   }
   
   .shadow-primary {
     box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+  }
+  
+  .shadow-blue {
+    box-shadow: 0 20px 60px -15px hsl(var(--accent-blue) / 0.5), 0 10px 30px -10px hsl(var(--accent-cyan) / 0.3);
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--accent-blue) / 0.4), 0 0 40px hsl(var(--accent-cyan) / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--accent-blue) / 0.6), 0 0 80px hsl(var(--accent-cyan) / 0.4);
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 }

@@ -49,11 +49,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 bg-gradient-to-br from-secondary via-background to-accent/5 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--accent)/0.1)_0%,_transparent_50%)]" />
+    <section id="servicos" className="py-24 bg-gradient-to-br from-accent-teal/5 via-background to-accent-purple/10 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-radial-blue opacity-40" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="h-1 w-20 bg-gradient-accent rounded-full mb-8 mx-auto" />
+          <div className="h-1 w-20 gradient-teal-blue rounded-full mb-8 mx-auto shadow-glow" />
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             Áreas de Atuação
           </h2>
@@ -64,9 +64,9 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {mainServices.map((service, index) => (
-              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-white to-accent/5 dark:from-card dark:to-accent/10">
+              <Card key={index} className="border-none shadow-blue hover:shadow-glow-intense transition-all duration-300 hover:scale-105 glass-blue">
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+                  <div className="w-14 h-14 rounded-xl gradient-blue-ocean flex items-center justify-center mb-4 shadow-glow animate-pulse-glow">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -80,9 +80,9 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-primary/5 to-accent/5">
+              <Card key={index} className="border-none shadow-blue hover:shadow-glow transition-all duration-300 hover:scale-105 glass-blue">
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 rounded-xl gradient-blue-purple flex items-center justify-center mb-4 shadow-glow">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>

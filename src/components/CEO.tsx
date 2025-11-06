@@ -4,22 +4,22 @@ import ericaPhoto from "@/assets/erica-melo.jpg";
 
 const CEO = () => {
   return (
-    <section id="ceo" className="py-24 bg-gradient-to-br from-primary/5 via-secondary to-accent/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(var(--accent)/0.15)_0%,_transparent_60%)]" />
+    <section id="ceo" className="py-24 bg-gradient-to-br from-accent-purple/5 via-accent-blue/10 to-accent-teal/5 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-radial-blue opacity-50" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="h-1 w-20 bg-gradient-primary rounded-full mb-8 mx-auto" />
+          <div className="h-1 w-20 gradient-blue-ocean rounded-full mb-8 mx-auto shadow-glow-intense" />
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">CEO & Fundadora</h2>
           
-          <Card className="border-none shadow-2xl overflow-hidden">
+          <Card className="border-none shadow-glow-intense overflow-hidden glass-blue">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-1 bg-gradient-accent p-10 flex flex-col items-center justify-center relative overflow-hidden">
+              <div className="lg:col-span-1 gradient-teal-blue p-10 flex flex-col items-center justify-center relative overflow-hidden animate-gradient">
                 <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mt-16" />
                 <div className="absolute bottom-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mb-20" />
                 <img 
                   src={ericaPhoto}
                   alt="Érica Mélo" 
-                  className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl mb-6 relative z-10"
+                  className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-glow-intense mb-6 relative z-10 animate-pulse-glow"
                 />
                 <h3 className="text-3xl font-bold text-white mb-2 relative z-10">Érica Mélo</h3>
                 <p className="text-white/95 text-lg mb-8 relative z-10">CEO & Fundadora</p>
