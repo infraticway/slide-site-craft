@@ -32,9 +32,9 @@ const Contact = () => {
                     asChild
                     className="bg-primary hover:bg-primary-light w-full md:w-auto"
                   >
-                    <a href="mailto:silveira_erica@hotmail.com" className="flex items-center gap-2">
+                    <a href="mailto:contato@melowconnect.com.br" className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
-                      silveira_erica@hotmail.com
+                      contato@melowconnect.com.br
                     </a>
                   </Button>
                   
@@ -59,7 +59,7 @@ const Contact = () => {
                     className="w-full md:w-auto border-2 border-accent text-accent hover:bg-accent hover:text-white"
                   >
                     <a 
-                      href="https://www.linkedin.com/in/erica-mélo-b034334"
+                      href="https://www.linkedin.com/company/melow-connect"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
