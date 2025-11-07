@@ -7,9 +7,7 @@ import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ValuesPage from "./pages/ValuesPage";
-import MissionPage from "./pages/MissionPage";
 import CEOPage from "./pages/CEOPage";
-import LegacyPage from "./pages/LegacyPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
@@ -26,9 +24,7 @@ const App = () => (
           <Route path="/sobre" element={<AboutPage />} />
           <Route path="/servicos" element={<ServicesPage />} />
           <Route path="/valores" element={<ValuesPage />} />
-          <Route path="/missao" element={<MissionPage />} />
           <Route path="/ceo" element={<CEOPage />} />
-          <Route path="/legado" element={<LegacyPage />} />
           <Route path="/contato" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

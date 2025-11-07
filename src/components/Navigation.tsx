@@ -20,9 +20,7 @@ const Navigation = () => {
     { label: "Sobre", href: "/sobre" },
     { label: "Serviços", href: "/servicos" },
     { label: "Valores", href: "/valores" },
-    { label: "Missão", href: "/missao" },
     { label: "CEO", href: "/ceo" },
-    { label: "Legado", href: "/legado" },
     { label: "Contato", href: "/contato" },
   ];
 
