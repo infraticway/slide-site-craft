@@ -37,7 +37,7 @@ const CEO = () => {
                     <span className="text-sm">+55 11 98201-2043</span>
                   </a>
                   <a 
-                    href="https://www.linkedin.com/in/erica-mélo-b034334"
+                    href="https://www.linkedin.com/in/%C3%A9rica-m%C3%A9lo-b034334/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
