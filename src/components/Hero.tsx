@@ -9,8 +9,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 gradient-purple-pink" />
-      <div className="absolute inset-0 gradient-radial-purple opacity-50" />
+      <div className="absolute inset-0 gradient-blue-deep" />
+      <div className="absolute inset-0 gradient-radial-blue opacity-50" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center pt-20">
@@ -39,9 +39,9 @@ const Hero = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
+              variant="outline-white"
               onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-white text-white hover:bg-white/15 hover:scale-105 text-lg px-10 py-6 transition-all"
+              className="hover:scale-105 text-lg px-10 py-6 transition-all"
             >
               Saiba mais
             </Button>

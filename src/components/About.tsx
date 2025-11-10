@@ -5,7 +5,7 @@ const About = () => {
     <section id="sobre" className="py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent-purple rounded-full mb-8 mx-auto" />
+          <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent-cyan rounded-full mb-8 mx-auto" />
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
             Sobre a Melow Connect
           </h2>

@@ -5,9 +5,11 @@ import melowLogo from "@/assets/melow-logo.png";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-32 bg-gradient-to-br from-primary via-primary-dark to-accent-purple text-white relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+    <section id="contato" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-deep-ocean" />
+      <div className="absolute inset-0 gradient-radial-blue opacity-40" />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center text-white">
           <img 
             src={melowLogo} 
             alt="Melow Connect" 
@@ -29,7 +31,7 @@ const Contact = () => {
                   <Button 
                     size="lg"
                     asChild
-                    className="bg-primary hover:bg-primary-dark text-white w-full md:w-auto px-8 py-6 text-lg"
+                    className="bg-primary hover:bg-primary-dark text-primary-foreground w-full md:w-auto px-8 py-6 text-lg"
                   >
                     <a href="mailto:contato@melowconnect.com.br" className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
@@ -41,7 +43,7 @@ const Contact = () => {
                     size="lg"
                     variant="outline"
                     asChild
-                    className="w-full md:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg"
+                    className="w-full md:w-auto px-8 py-6 text-lg"
                   >
                     <a href="tel:+5511982012043" className="flex items-center gap-2">
                       <Phone className="h-5 w-5" />
@@ -55,7 +57,7 @@ const Contact = () => {
                     size="lg"
                     variant="outline"
                     asChild
-                    className="w-full md:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg"
+                    className="w-full md:w-auto px-8 py-6 text-lg"
                   >
                     <a 
                       href="https://www.linkedin.com/company/melow-connect"
