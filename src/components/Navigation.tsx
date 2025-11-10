@@ -3,10 +3,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import melowLogo from "@/assets/melow-logo.png";
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +20,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Sobre", href: "/sobre" },
-    { label: "Serviços", href: "/servicos" },
-    { label: "Valores", href: "/valores" },
-    { label: "CEO", href: "/ceo" },
-    { label: "Contato", href: "/contato" },
+    { label: t('nav.about'), href: "/sobre" },
+    { label: t('nav.services'), href: "/servicos" },
+    { label: t('nav.values'), href: "/valores" },
+    { label: t('nav.ceo'), href: "/ceo" },
+    { label: t('nav.contact'), href: "/contato" },
   ];
 
   const handleClick = () => {
@@ -55,16 +58,20 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            <LanguageSelector />
           </div>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className={`md:hidden text-foreground`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSelector />
+            <Button
+              variant="ghost"
+              size="icon"
+              className={`text-foreground`}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {isOpen && (

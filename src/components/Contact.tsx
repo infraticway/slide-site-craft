@@ -2,8 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Linkedin } from "lucide-react";
 import melowLogo from "@/assets/melow-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="contato" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 gradient-deep-ocean" />
@@ -17,11 +20,11 @@ const Contact = () => {
           />
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Vamos conversar?
+            {t('contact.title')}
           </h2>
           
           <p className="text-xl text-white/95 mb-16 text-balance max-w-2xl mx-auto leading-relaxed">
-            Entre em contato e descubra como podemos impulsionar seu crescimento na América Latina
+            {t('contact.subtitle')}
           </p>
 
           <Card className="border-none shadow-2xl bg-white">
@@ -35,7 +38,7 @@ const Contact = () => {
                   >
                     <a href="mailto:contato@melowconnect.com.br" className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
-                      contato@melowconnect.com.br
+                      {t('contact.email')}
                     </a>
                   </Button>
                   
@@ -47,7 +50,7 @@ const Contact = () => {
                   >
                     <a href="tel:+5511982012043" className="flex items-center gap-2">
                       <Phone className="h-5 w-5" />
-                      +55 11 98201-2043
+                      {t('contact.call')}
                     </a>
                   </Button>
                 </div>
@@ -66,7 +69,7 @@ const Contact = () => {
                       className="flex items-center gap-2"
                     >
                       <Linkedin className="h-5 w-5" />
-                      Conecte-se no LinkedIn
+                      {t('contact.linkedin')}
                     </a>
                   </Button>
                 </div>
