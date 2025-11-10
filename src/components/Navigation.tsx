@@ -30,9 +30,7 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border/50' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-soft border-b border-border/50`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -52,9 +50,7 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
-                }`}
+                className={`font-medium transition-colors text-foreground hover:text-primary`}
               >
                 {item.label}
               </Link>
@@ -64,7 +60,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className={`md:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`}
+            className={`md:hidden text-foreground`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
