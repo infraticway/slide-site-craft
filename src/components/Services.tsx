@@ -1,11 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, TrendingUp, Brain, BarChart3, Users, Shield, Network, Award } from "lucide-react";
+import { Globe, TrendingUp, Brain, BarChart3, Users, Shield, Network, Award, Briefcase } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
   const { t } = useLanguage();
   
   const mainServices = [
+    {
+      icon: Briefcase,
+      titleKey: "services.newBusiness",
+      descKey: "services.newBusinessDesc"
+    },
     {
       icon: Globe,
       titleKey: "services.market",

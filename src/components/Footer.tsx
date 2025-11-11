@@ -1,16 +1,72 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import ticwayLogo from "@/assets/ticway-logo.png";
+import luxtiaLogo from "@/assets/luxtia-logo.png";
+import raqaLogo from "@/assets/raqa-logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
+  const partners = [
+    { name: "TICWay", logo: ticwayLogo, url: "https://ticway.com.br/" },
+    { name: "Luxtia", logo: luxtiaLogo, url: "https://luxtia.com.br/" },
+    { name: "RAQA", logo: raqaLogo, url: "https://raqa.com.br/home/" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-primary via-primary-dark to-accent-blue text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p className="text-white/90 text-lg">
-            © {currentYear} Melow Connect. {t('footer.rights')}
-          </p>
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Partners Carousel */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-center text-white">
+              Nossos Parceiros
+            </h3>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {partners.map((partner, index) => (
+                  <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
+                    <a
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center p-8 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 h-32"
+                    >
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="max-h-20 max-w-full object-contain"
+                      />
+                    </a>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center border-t border-white/20 pt-8">
+            <p className="text-white/90 text-lg">
+              © {currentYear} Melow Connect. {t('footer.rights')}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
