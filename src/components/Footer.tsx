@@ -35,25 +35,25 @@ const Footer = () => {
               }}
               plugins={[
                 Autoplay({
-                  delay: 2500,
+                  delay: 2000,
                   stopOnInteraction: false,
                 }),
               ]}
-              className="w-full"
+              className="w-full max-w-md mx-auto"
             >
-              <CarouselContent className="-ml-4">
+              <CarouselContent>
                 {partners.map((partner, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/3">
+                  <CarouselItem key={index}>
                     <a
                       href={partner.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center p-6 bg-white rounded-lg hover:scale-105 transition-all duration-300 h-28 shadow-lg hover:shadow-xl"
+                      className="flex items-center justify-center p-8 transition-all duration-300 h-32"
                     >
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        className="max-h-16 max-w-full object-contain"
+                        className="max-h-24 max-w-full object-contain drop-shadow-lg"
                       />
                     </a>
                   </CarouselItem>
