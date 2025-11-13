@@ -27,14 +27,14 @@ const Contact = () => {
             {t('contact.subtitle')}
           </p>
 
-          <Card className="border-none shadow-2xl bg-gradient-to-br from-white via-primary-light/5 to-accent-cyan/10 backdrop-blur-sm">
+          <Card className="border-2 border-primary/30 shadow-2xl bg-white rounded-3xl overflow-hidden">
             <CardContent className="py-12 px-8">
               <div className="space-y-6">
                 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                   <Button 
                     size="lg"
                     asChild
-                    className="bg-primary hover:bg-primary-dark text-primary-foreground w-full md:w-auto px-8 py-6 text-lg"
+                    className="bg-gradient-to-r from-primary to-accent-cyan hover:from-primary-dark hover:to-primary text-white w-full md:w-auto px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   >
                     <a href="mailto:contato@melowconnect.com.br" className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
@@ -46,7 +46,7 @@ const Contact = () => {
                     size="lg"
                     variant="outline"
                     asChild
-                    className="w-full md:w-auto px-8 py-6 text-lg"
+                    className="w-full md:w-auto px-8 py-6 text-lg border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                   >
                     <a href="tel:+5511982012043" className="flex items-center gap-2">
                       <Phone className="h-5 w-5" />
@@ -60,7 +60,7 @@ const Contact = () => {
                     size="lg"
                     variant="outline"
                     asChild
-                    className="w-full md:w-auto px-8 py-6 text-lg"
+                    className="w-full md:w-auto px-8 py-6 text-lg border-2 border-accent-blue text-accent-blue hover:bg-gradient-to-r hover:from-accent-blue hover:to-accent-cyan hover:text-white hover:border-transparent transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                   >
                     <a 
                       href="https://www.linkedin.com/company/melow-connect"
