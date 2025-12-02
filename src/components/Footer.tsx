@@ -8,6 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 import ticwayLogo from "@/assets/ticway-logo.png";
 import luxtiaLogo from "@/assets/luxtia-logo.png";
 import raqaLogo from "@/assets/raqa-logo.png";
+import btqLogo from "@/assets/btq-logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -17,6 +18,7 @@ const Footer = () => {
     { name: "TICWay", logo: ticwayLogo, url: "https://ticway.com.br/" },
     { name: "Luxtia", logo: luxtiaLogo, url: "https://luxtia.com.br/" },
     { name: "RAQA", logo: raqaLogo, url: "https://raqa.com.br/home/" },
+    { name: "BTQ Life Sciences", logo: btqLogo, url: "https://btqlife.com/" },
   ];
 
   return (
